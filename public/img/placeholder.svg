@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Meri Gebeya product image placeholder">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b7a5b"/><stop offset="1" stop-color="#0d3d2d"/>
+    </linearGradient>
+    <radialGradient id="pv" cx="50%" cy="42%" r="72%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.30"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#pg)"/>
+  <rect width="600" height="450" fill="url(#pv)"/>
+  <circle cx="300" cy="190" r="104" fill="#ffffff" opacity="0.10"/>
+  <text x="300" y="228" font-size="108" text-anchor="middle">🛍️</text>
+  <text x="300" y="345" font-size="28" font-family="system-ui,Segoe UI,Noto Sans Ethiopic,sans-serif"
+        font-weight="700" fill="#fff" text-anchor="middle">No image yet</text>
+  <text x="300" y="384" font-size="17" font-family="system-ui,sans-serif" fill="#ffffff"
+        opacity="0.72" text-anchor="middle" letter-spacing="3">MERI GEBEYA</text>
+</svg>

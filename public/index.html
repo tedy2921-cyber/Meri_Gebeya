@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meri Gebeya · መሪ ገበያ — fresh from the gebeya to your door</title>
+<meta name="description" content="Meri Gebeya is an Ethiopian online marketplace: coffee, spices, grains, household goods and more, delivered across Addis Ababa and the regions.">
+<meta name="theme-color" content="#0f6b4f">
+<link rel="icon" href="/img/favicon.svg">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>🚚 Free Addis delivery over <b>1,200 ETB</b></span>
+    <span class="hide-sm">· 📞 <b>+251 918292</b></span>
+    <span class="hide-sm">· ☕ Roasted every Monday</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#/">
+      <span class="mark">🛍</span>
+      <span class="name">Meri Gebeya<small>መሪ ገበያ</small></span>
+    </a>
+
+    <form class="search" id="searchForm" role="search">
+      <input id="q" name="q" type="search" autocomplete="off" placeholder="Search coffee, teff, berbere…" aria-label="Search products">
+      <button class="go" type="submit" aria-label="Search">⌕</button>
+      <div id="suggest"></div>
+    </form>
+
+    <nav class="row">
+      <a class="iconbtn" href="#/account" id="acctBtn" title="My account" aria-label="My account">👤</a>
+      <a class="iconbtn" href="#/cart" id="cartBtn" title="Basket" aria-label="Basket">🧺<span class="badge" id="cartBadge" data-n="0">0</span></a>
+      <button class="btn sm" id="langBtn" title="Switch language">አማርኛ</button>
+    </nav>
+  </div>
+  <nav class="cats" aria-label="Product categories"><div class="wrap list" id="catNav"></div></nav>
+</header>
+
+<main id="view" class="wrap"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Meri Gebeya</h4>
+        <p class="small">A marketplace built around Ethiopian producers — roasters, millers, weavers and
+          women's spice unions. Order by 2pm for same-day Addis delivery.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul id="footCats"></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#/track">Track an order</a></li>
+          <li><a href="#/cart">Basket</a></li>
+          <li><a href="#/account">My account</a></li>
+          <li><a href="#/account/orders">Order history</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Payments</h4>
+        <ul>
+          <li>Telebirr · CBE Birr</li>
+          <li>Bank transfer · Card</li>
+          <li>Cash on delivery</li>
+          <li><a href="/admin">Seller console →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>© <span id="year"></span> Meri Gebeya · Addis Ababa, Ethiopia</span>
+      <span class="muted">Demo build — prices in ETB, payments are simulated.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="modal" hidden></div>
+
+<script src="/assets/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Mitmita Hot Blend 250g">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c2571f"/><stop offset="1" stop-color="#5c1f12"/>
+    </linearGradient>
+    <radialGradient id="v" cx="50%" cy="42%" r="72%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.28"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#g)"/>
+  <rect width="600" height="450" fill="url(#v)"/>
+  <circle cx="300" cy="196" r="112" fill="#ffffff" opacity="0.12"/>
+  <text x="300" y="238" font-size="120" text-anchor="middle">🌶️</text>
+  <text x="300" y="356" font-size="30" font-family="system-ui,Segoe UI,Noto Sans Ethiopic,sans-serif"
+        font-weight="700" fill="#fff" text-anchor="middle">Mitmita Hot Blend 250g</text>
+  <text x="300" y="392" font-size="17" font-family="system-ui,sans-serif" fill="#ffffff"
+        opacity="0.75" text-anchor="middle" letter-spacing="3">MERI GEBEYA</text>
+</svg>

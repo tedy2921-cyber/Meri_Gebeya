@@ -1,0 +1,97 @@
+/* =============================================================================
+   admin.css — seller console chrome on top of the shared design system.
+   Dark sidebar-free top bar, denser tables, metric cards and CSS charts.
+   ============================================================================= */
+
+body.admin { background: #f5f2ec; }
+body.admin::before { background: radial-gradient(900px 420px at 0% -10%, #eef4f0 0%, transparent 60%); }
+
+.adminbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 20px;
+  padding: 12px 22px; background: var(--ink); color: #f2ece1;
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .5);
+}
+.adminbar .logo .name { font-size: 1.02rem; color: #fff; }
+.adminbar .logo .name small { color: var(--gold); }
+.adminbar .btn { background: #241f19; border-color: #3a332b; color: #f2ece1; }
+.adminbar .btn:hover { background: #2f2822; border-color: var(--gold); }
+.adminbar .who { font-size: .84rem; color: #cbbfae; }
+.adminbar .who b { color: #fff; display: block; font-size: .9rem; }
+
+.adminnav { display: flex; gap: 2px; overflow-x: auto; flex: 1; }
+.adminnav a {
+  padding: 8px 13px; border-radius: 10px; font-size: .88rem; white-space: nowrap; color: #d8cec0;
+}
+.adminnav a:hover { background: #2a241e; color: #fff; }
+.adminnav a.on { background: var(--brand); color: #fff; font-weight: 600; }
+
+.adminmain { padding-bottom: 40px; }
+.adminmain h1 { font-size: 1.5rem; }
+
+/* metric cards */
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(178px, 1fr)); gap: 14px; }
+.metric {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px;
+  position: relative; overflow: hidden;
+}
+.metric::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--brand); }
+.metric.gold::after { background: var(--gold); }
+.metric.chili::after { background: var(--chili); }
+.metric.berry::after { background: var(--berry); }
+.metric .k { font-size: .76rem; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); }
+.metric .v { font-size: 1.55rem; font-weight: 800; letter-spacing: -.02em; margin-top: 2px; }
+.metric .d { font-size: .8rem; color: var(--muted); }
+.metric .d b.up { color: var(--brand); }
+.metric .d b.down { color: var(--chili); }
+
+/* charts (pure CSS) */
+.chart { display: grid; grid-auto-flow: column; gap: 6px; align-items: end; height: 168px; padding-top: 8px; }
+.chart .bar { position: relative; flex: 1; background: linear-gradient(180deg, var(--brand) 0%, #14b57f 100%);
+  border-radius: 6px 6px 3px 3px; min-height: 3px; transition: .2s ease; }
+.chart .bar:hover { filter: brightness(1.12); }
+.chart .bar span { position: absolute; inset: auto 0 -20px; text-align: center; font-size: .68rem; color: var(--muted); }
+.chart .bar b { position: absolute; top: -18px; inset-inline: 0; text-align: center; font-size: .7rem; color: var(--ink-2); }
+.chartx { margin-bottom: 24px; }
+
+.hbars { display: grid; gap: 9px; }
+.hbar { display: grid; grid-template-columns: 128px 1fr 84px; gap: 10px; align-items: center; font-size: .86rem; }
+.hbar .track { height: 12px; background: #ece4d7; border-radius: var(--r-pill); overflow: hidden; }
+.hbar .fill { height: 100%; border-radius: var(--r-pill); background: linear-gradient(90deg, var(--gold), #e6b95c); }
+.hbar .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+
+.cols { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; align-items: start; }
+@media (max-width: 980px) { .cols { grid-template-columns: 1fr; } }
+
+/* tables + toolbars */
+.toolbar.admin { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+.toolbar.admin input, .toolbar.admin select {
+  padding: 9px 12px; border-radius: 10px; border: 1px solid var(--line-2); background: #fff;
+}
+.toolbar.admin input[type="search"] { min-width: 240px; }
+.tablewrap.card { padding: 4px 6px; }
+table.t.dense td { padding: 8px 10px; font-size: .87rem; }
+table.t .actions { display: flex; gap: 6px; justify-content: flex-end; }
+table.t tr.low td { background: #fdf3e7; }
+table.t tr.out td { background: var(--chili-soft); }
+.cellname { display: flex; gap: 10px; align-items: center; }
+.cellname img { width: 44px; height: 38px; object-fit: cover; border-radius: 8px; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: var(--r-pill); font-size: .74rem; font-weight: 700; }
+.pill.draft { background: #efe9df; color: #6b6257; }
+.pill.active { background: var(--brand-soft); color: var(--brand-dark); }
+.pill.archived { background: var(--chili-soft); color: var(--chili); }
+.pill.pending { background: var(--gold-soft); color: #6b4a12; }
+
+.stockedit { display: flex; gap: 6px; align-items: center; }
+.stockedit input { width: 74px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line-2); }
+
+.filters-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.filters-row button { padding: 7px 13px; border-radius: var(--r-pill); border: 1px solid var(--line-2); background: #fff; cursor: pointer; font-size: .86rem; }
+.filters-row button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); margin-top: 8px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; }
+
+.gate { max-width: 420px; margin: 8vh auto; }
+.mono { font-family: var(--mono); font-size: .84rem; }
+.json { font-family: var(--mono); font-size: .78rem; background: #17140f; color: #d8e6d8; padding: 12px; border-radius: 10px; overflow: auto; max-height: 260px; }

@@ -1,0 +1,20 @@
+{
+  "name": "meri-gebeya",
+  "version": "1.0.0",
+  "description": "Meri Gebeya (መሪ ገበያ) — a full-stack Ethiopian marketplace: storefront, checkout and admin console. Zero npm dependencies: Node 22.5+ built-ins only (node:http, node:sqlite, node:crypto).",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.5.0" },
+  "main": "server/src/server.js",
+  "scripts": {
+    "start": "node server/src/server.js",
+    "start:env": "node --env-file-if-exists=.env server/src/server.js",
+    "dev": "node --watch server/src/server.js",
+    "seed": "node server/src/seed.js",
+    "reset": "node server/src/seed.js --fresh",
+    "sql": "node server/src/sql.js",
+    "check": "node --check server/src/server.js && node --check server/src/api.js && node --check server/src/cart.js && node --check server/src/orders.js && node --check server/src/users.js && node --check server/src/admin.js && node --check server/src/catalog.js && node --check server/src/config.js && node --check server/src/http.js && node --check server/src/security.js && node --check server/src/seed.js && node --check server/src/sql.js && node --check public/assets/core.js && node --check public/assets/app.js && node --check public/assets/admin.js"
+  },
+  "keywords": ["ecommerce", "ethiopia", "sqlite", "zero-dependency", "rest-api"],
+  "license": "MIT"
+}

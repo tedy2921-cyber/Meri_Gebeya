@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meri Gebeya · Seller console</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/img/favicon.svg">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/admin.css">
+</head>
+<body class="admin">
+
+<header class="adminbar">
+  <a class="logo" href="/admin"><span class="mark">🛍</span><span class="name">Meri Gebeya<small>seller console</small></span></a>
+  <nav class="adminnav" id="adminNav"></nav>
+  <div class="row">
+    <a class="btn sm" href="/" target="_blank" rel="noopener">🏬 Open shop</a>
+    <span class="who" id="who"></span>
+    <button class="btn sm" id="logout">Sign out</button>
+  </div>
+</header>
+
+<main class="wrap adminmain">
+  <div id="adminTop" class="spread" style="margin:22px 0 16px"><div><h1 id="adminTitle">Dashboard</h1>
+    <p class="muted small" id="adminHint"></p></div><div class="row" id="adminActions"></div></div>
+  <div id="view"></div>
+</main>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="modal" hidden></div>
+
+<script src="/assets/admin.js" type="module"></script>
+</body>
+</html>

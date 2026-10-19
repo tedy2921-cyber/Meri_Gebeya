@@ -1,0 +1,16 @@
+# runtime database + scratch — never commit the shop's data
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# local config
+.env
+.env.*
+!.env.example
+
+# logs and editor/OS noise
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
